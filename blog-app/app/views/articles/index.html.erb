@@ -1,3 +1,9 @@
+<% arr = [1,2,3] %>
+<%= arr[0] %>
+<%= @number %>
+
+<%= render "header" %>
+
 <table>
     <thead>
         <tr>
@@ -15,7 +21,7 @@
             <td><%= ctr %></td>
             <td><%= article.id %></td>
             <td><%= article.name %></td>
-            <td><marquee><%= "Class: #{article.class}" %></marquee></td>
+            <td><%= "Class: #{article.class}" %></td>
             <td><%= article.body %></td>
         </tr>
         <% ctr += 1 %> <% end %>

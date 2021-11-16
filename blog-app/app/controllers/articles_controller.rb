@@ -1,5 +1,8 @@
 class ArticlesController < ApplicationController
+    layout 'double', only: [:new]
+    
     def index
+        @number = 20
         @articles = Article.all
     end
 
