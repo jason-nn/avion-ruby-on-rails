@@ -2,16 +2,14 @@
 
 <p><%= @article.body %></p>
 
-<button>
-    <%= link_to "Edit", edit_article_path(@article) %>
-</button>
+<button><%= link_to "Edit", edit_article_path(@article) %></button>
 
 <br />
 <br />
 
 <button>
-    <%= link_to "Destroy", article_path(@article), method: :delete, 
-    data: { confirm: "Are you sure?" } %>
+    <%= link_to "Destroy", article_path(@article), method: :delete, data: {
+    confirm: "Are you sure?" } %>
 </button>
 
 <br />
@@ -19,6 +17,15 @@
 <hr />
 <br />
 
-<button>
-    <%= link_to "Back", articles_path %>
-</button>
+<button><%= link_to "Back", articles_path(@articles) %></button>
+
+<br />
+<br />
+<hr />
+<br />
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
