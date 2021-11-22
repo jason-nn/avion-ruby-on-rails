@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Category Feature: Edit', type: :feature do
+RSpec.describe 'Category Feature: New', type: :feature do
     it 'should show the new category header' do
         visit new_category_path
         expect(page).to have_content ('New Category')
