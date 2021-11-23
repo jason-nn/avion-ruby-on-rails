@@ -28,4 +28,10 @@ RSpec.describe 'Category Requests', type: :request do
         get category_path(category)
         expect(response).to have_http_status(200)
     end
+
+    it 'PATCH /categories/:id' do
+        category = Category.create(name: 'Test')
+        patch category_path(category), params: { category: { name: 'Updated' } }
+        expect(response).to redirect_to(category_path(category))
+    end
 end
