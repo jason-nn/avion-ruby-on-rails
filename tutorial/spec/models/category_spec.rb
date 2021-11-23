@@ -15,7 +15,7 @@ RSpec.describe Category, type: :model do
     # Category is a class.
     # The Category class is indeed found in the category.rb file.
     # The Category.rb file doesn’t contain any really egregious Ruby syntax errors.
-    # Category.new will take three arguments.
+    # Category.new will take one argument.
     # Category.new actually returns something.
     # Category.new doesn’t throw an exception.
 
