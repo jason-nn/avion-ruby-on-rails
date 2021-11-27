@@ -8,10 +8,10 @@ default: &default
     port: 5432
 development:
     <<: *default
-    database: testapp_dev
+    database: test_dev
 test:
     <<: *default
-    database: testapp_test
+    database: test_test
 production:
     <<: *default
-    database: testapp_prod
+    database: test_prod
